@@ -7,8 +7,7 @@
 4. [API Endpoint](#api-endpoint)
 5. [Frontend Page](#frontend-page)
 6. [Unit Tests](#unit-tests)
-7. [Error Handling and SEO](#error-handling-and-seo)
-8. [Contributions](#contributions)
+7. [Error Handling](#error-handling)
 
 ## Technologies Used
 - **React**: A JavaScript library for building user interfaces.
@@ -42,30 +41,31 @@ The project aims to demonstrate integration between a React frontend and an Expr
 ## Project Structure
 
 The project is organized into the following structure:
-root
-|___ backend (Please again check the README file of backend to get better understanding.)
-|___ frontend
-          |__mocks__
-             | fileMock.js
-             | styleMock.js  
-          | components
-                  | _tests_
-                       | Gallery.test.tsx
-                       | PropertySection.test.tsx
-                  | Gallery.tsx
-                  | Navbar.tsx
-                  | PropertySection.tsx
-          | public
-              | images
-              | Lameridian - Your Hotel Guide.pdf
-              | UnitTest.pdf
-          | src
-              | pages
-                  | hotel-details
-                        | [slug]
-                            | [hotelid].tsx
-              | styles
-                     | globals.css 
+- nextjs
+  - backend (Please again check the README file of backend to get better understanding.)
+  - frontend
+    - mocks
+      - fileMock.js
+      - styleMock.js
+    - components
+      - _tests_
+        - Gallery.test.tsx
+        - PropertySection.test.tsx
+      - Gallery.tsx
+      - Navbar.tsx
+      - PropertySection.tsx
+    - public
+      - images
+      - Lameridian - Your Hotel Guide.pdf
+      - UnitTest.pdf
+    - src
+      - pages
+        - hotel-details
+          - [slug]
+            - [hotelid].tsx
+    - styles
+      - globals.css
+
 
 ### Run the project:
 The project consists of two separate folders: backend and frontend.
@@ -90,7 +90,7 @@ This will start the backend application at http://localhost:3002.
 cd nextjs/frontend
 npm run dev
 ```
-This will start the frontend application at http://localhost:3000.
+This will start the frontend application at http://localhost:3000. and it will run the src/pages/index.tsx , a static file which will contain the previous HTML-CSS Assignment's codes.
 
 This will run both the backend and frontend servers concurrently, enabling the frontend to fetch data dynamically from the API.
 
@@ -124,3 +124,6 @@ Run the following command to generate a coverage report:
 ```bash
 npm run test:coverage 
 ```
+### Error Handling 
+**Error Handling**: The project includes error handling for cases such as when the hotel is not found, displaying a custom 404 page with a friendly error message.
+

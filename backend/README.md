@@ -19,26 +19,26 @@ First, clone this repository to your local machine by running the following comm
 ```bash
 git clone https://github.com/SamiaAurin/W3-Ass-NodeExpressTS.git
 ```
->> Once cloned, navigate into the project directory: 
+Once cloned, navigate into the project directory: 
 ```bash
 cd hotel-management-api
 ```
->> Next, install all required dependencies using npm:
+Next, install all required dependencies using npm:
 ```bash
 npm install
 ```
->> Make sure that TypeScript is installed globally on your system. 
->> If you don\'t have it installed, run the following command to install it globally:
+Make sure that TypeScript is installed globally on your system. 
+If you don\'t have it installed, run the following command to install it globally:
 ```bash
 npm install -g typescript
 npx tsc --version
 ```
->>To start the server, run the following command:
+To start the server, run the following command:
 ```bash
 npm run dev
 ```
->> This will launch the server, and it will be accessible at http://localhost:3002.
->>To ensure that everything is working as expected, run the unit tests using the following command:
+This will launch the server, and it will be accessible at http://localhost:3002.
+To ensure that everything is working as expected, run the unit tests using the following command:
 ```bash
 npm test
 ```
