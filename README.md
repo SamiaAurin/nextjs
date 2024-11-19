@@ -101,7 +101,10 @@ This will run both the backend and frontend servers concurrently, enabling the f
 
 This endpoint fetches the details of a hotel based on the provided `slug` and `hotel-id`.
 
-**Example Request**: http://localhost:3000/hotel-details/lameridian/1731479032307 
+**Example Request**: 
+http://localhost:3000/hotel-details/lameridian/1731479032307 
+or 
+http://localhost:3000/hotel-details/juneau-vacation-home/1731921707038
 
 
 This will display a frontend page showing the hotel details, such as title, description, images, and amenities, rooms descriptions. The layout and design of the page are based on the structure and style detailed in the **`Lameridian - Your Hotel Guide.pdf`** file, which can be found in the **`frontend` folder**.
