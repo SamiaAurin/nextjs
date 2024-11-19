@@ -39,6 +39,34 @@ This project converts a traditional HTML and CSS website into a dynamic, compone
 
 The project aims to demonstrate integration between a React frontend and an Express.js API, ensuring scalability, maintainability, and type safety using TypeScript. Unit tests are written for critical components and API endpoints to ensure the reliability of the application.
 
+## Project Structure
+
+The project is organized into the following structure:
+root
+|___ backend (Please again check the README file of backend to get better understanding.)
+|___ frontend
+          |__mocks__
+             | fileMock.js
+             | styleMock.js  
+          | components
+                  | _tests_
+                       | Gallery.test.tsx
+                       | PropertySection.test.tsx
+                  | Gallery.tsx
+                  | Navbar.tsx
+                  | PropertySection.tsx
+          | public
+              | images
+              | Lameridian - Your Hotel Guide.pdf
+              | UnitTest.pdf
+          | src
+              | pages
+                  | hotel-details
+                        | [slug]
+                            | [hotelid].tsx
+              | styles
+                     | globals.css 
+
 ### Run the project:
 The project consists of two separate folders: backend and frontend.
 
@@ -56,7 +84,7 @@ npm run dev
 ```
 This will start the backend application at http://localhost:3002.
 
-** 1. Start the Frontend**: Navigate to the frontend folder and run the following command to start the frontend server:
+** 2. Start the Frontend**: Navigate to the frontend folder and run the following command to start the frontend server:
 
 ```bash
 cd nextjs/frontend
@@ -78,8 +106,21 @@ This endpoint fetches the details of a hotel based on the provided `slug` and `h
 
 This will display a frontend page showing the hotel details, such as title, description, images, and amenities, rooms descriptions. The layout and design of the page are based on the structure and style detailed in the **`Lameridian - Your Hotel Guide.pdf`** file, which can be found in the **`frontend` folder**.
 
-### PDF Layout Reference
-The **`hotel-details-layout.pdf`** file, located in the `frontend` folder, provides a visual guide on how the frontend page should look, including:
+### Frontend Page
+The **`Lameridian - Your Hotel Guide.pdf`** file, located in the `frontend` folder, provides a visual guide on how the frontend page should look, including:
 - How hotel details are presented
 - Layout for the images and descriptions
 - General styling and structure
+
+### Unit Tests
+Please Read **`UnitTest.pdf`** for necessary install dependencied and file configurations.
+
+To run the unit tests for the project, use the following command:
+
+```bash
+npm test
+```
+Run the following command to generate a coverage report: 
+```bash
+npm run test:coverage 
+```
