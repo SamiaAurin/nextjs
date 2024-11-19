@@ -1,5 +1,6 @@
 import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
+import { within } from '@testing-library/react';
 import PropertySection from '../../components/PropertySection';  
 
 // Mock props for the test
@@ -19,39 +20,65 @@ const mockProps = {
       roomTitle: "Room 1",
       bedroomCount: 2,
       roomImage: []
+    },
+    { roomTitle: 'Room 2', 
+      bedroomCount: 3, 
+      roomImage: [] 
     }
   ]
+  
 };
 
 describe('PropertySection Component', () => {
-   /*
   it('renders hotel title and description', () => {
     render(<PropertySection {...mockProps} />);
-    
-    // Check if the title and description are rendered correctly
-    expect(screen.getByText(/Lameridian/i)).toBeInTheDocument();
-    expect(screen.getByText(/A luxury five star hotel/i)).toBeInTheDocument();
+
+    // Title Testing
+    const titleElement = screen.getByRole('heading', { level: 1, name: /lameridian/i });
+    expect(titleElement).toBeInTheDocument();
+
+    // Description Testing
+    const descriptionElement = screen.getByText(/a luxury five star hotel/i, { selector: 'h1' });
+    expect(descriptionElement).toBeInTheDocument();
   });
- 
+
+  // Testing for Amenities
   it('renders amenities list correctly', () => {
     render(<PropertySection {...mockProps} />);
     
-    // Check if amenities are rendered
     mockProps.amenities.forEach(amenity => {
-      expect(screen.getByText(new RegExp(amenity, 'i'))).toBeInTheDocument();
+      const elements = screen.getAllByText(new RegExp(amenity, 'i'));
+      expect(elements.length).toBeGreaterThan(0); // Ensure at least one match
+    });
+  });
+  
+  // Testing for rooms
+  it('renders room details correctly', () => {
+    render(<PropertySection {...mockProps} />);
+  
+    // Get the container for the "Rooms & beds" section
+    const roomsBedsSection = screen.getByText(/Rooms & beds/i).closest('div');
+    expect(roomsBedsSection).toBeInTheDocument();
+  
+    // Use `within` to scope queries to the section
+    const sectionQueries = within(roomsBedsSection!);
+  
+    mockProps.rooms.forEach((room) => {
+      // Check for room title
+      const roomTitle = sectionQueries.getByText(new RegExp(room.roomTitle, 'i'));
+      expect(roomTitle).toBeInTheDocument();
+  
+      // Check for bedroom count
+      const bedCountText = `${room.bedroomCount} ${room.bedroomCount > 1 ? 'Beds' : 'Bed'}`;
+      const bedCount = sectionQueries.getByText(new RegExp(bedCountText, 'i'));
+      expect(bedCount).toBeInTheDocument();
     });
   });
 
-  it('renders room details', () => {
-    render(<PropertySection {...mockProps} />);
-    
-    // Check if room details are rendered correctly
-    expect(screen.getByText(/Room 1/i)).toBeInTheDocument();
-    expect(screen.getByText(/2 bedrooms/i)).toBeInTheDocument();
-  });
-  */
+  // Testing for address
   it('renders address and map link', () => {
     render(<PropertySection {...mockProps} />);
+    //console.log(screen.debug());
     
     // Check if address is rendered
     expect(screen.getByText(/123 Test St, Juneau, AK/i)).toBeInTheDocument();
@@ -62,6 +89,7 @@ describe('PropertySection Component', () => {
     expect(mapLink).toHaveAttribute('href', `https://www.google.com/maps?q=58.3019,-134.4197`);
   });
 
+  // testing for host
   it('renders host information', () => {
     render(<PropertySection {...mockProps} />);
     
