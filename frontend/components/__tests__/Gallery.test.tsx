@@ -32,6 +32,29 @@ describe('Gallery Component', () => {
     fireEvent.click(shareButton);
 
   });
+  // 1.1 Closing the share modal
+  it('closes the share modal when close button is clicked', () => {
+    const mockProps = {
+      title: "Lameridian",
+      description: "A luxurious five-star hotel",
+      address: "123 Test St, Juneau, AK",
+      images: ["image1.jpg", "image2.jpg", "image3.jpg"],
+    };
+  
+    render(<Gallery {...mockProps} />);
+  
+    // Open the modal first
+    const shareButton = screen.getByRole('button', { name: /share/i });
+    fireEvent.click(shareButton);
+  
+    // Close the modal
+    const closeButton = screen.getByText('×'); // Assuming the close button is rendered as ×
+    fireEvent.click(closeButton);
+  
+    // Check if the modal is no longer in the document
+    expect(screen.queryByText(/share modal content/i)).toBeNull();
+  });
+  
   // 2. Testing Image Rendering:
   it('renders the gallery images correctly', () => {
     const mockProps = {
