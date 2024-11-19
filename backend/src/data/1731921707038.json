@@ -1,0 +1,39 @@
+{
+  "id": "1731921707038",
+  "slug": "juneau-vacation-home",
+  "images": [
+    "http://localhost:3002/uploads/home1.jpg",
+    "http://localhost:3002/uploads/home2.jpg",
+    "http://localhost:3002/uploads/home3.jpg",
+    "http://localhost:3002/uploads/home4.jpg",
+    "http://localhost:3002/uploads/home5.jpg",
+    "http://localhost:3002/uploads/1731921707038-room32.jpeg"
+  ],
+  "title": "Juneau Vacation Home",
+  "description": "Stunning View + Beach Access",
+  "guestCount": "100",
+  "bedroomCount": "10",
+  "bathroomCount": "5",
+  "amenities": [
+    "🛜 Free Wi-Fi",
+    "💆🏼 Spa"
+  ],
+  "host": "JuneauHost ",
+  "address": "Juneau, Alaska",
+  "latitude": "34.0522",
+  "longitude": "-118.2437",
+  "rooms": [
+    {
+      "hotelSlug": "juneau-vacation-home",
+      "roomSlug": "garden-view-suite",
+      "roomTitle": "Garden View Suite",
+      "bedroomCount": "2"
+    },
+    {
+      "hotelSlug": "juneau-vacation-home",
+      "roomSlug": "pool-view-suite",
+      "roomTitle": "Pool View Suite",
+      "bedroomCount": "3"
+    }
+  ]
+}

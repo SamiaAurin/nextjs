@@ -1,0 +1,39 @@
+{
+  "id": "1731479032307",
+  "slug": "lameridian",
+  "images": [
+    "http://localhost:3002/uploads/1731479032307-lameridian6.webp",
+    "http://localhost:3002/uploads/1731479032307-lameridian5.webp",
+    "http://localhost:3002/uploads/1731479032307-lameridian4.webp",
+    "http://localhost:3002/uploads/1731479032307-lameridian3.webp",
+    "http://localhost:3002/uploads/1731479032307-lameridian2.jpeg",
+    "http://localhost:3002/uploads/1731479032307-lameridian.jpeg"
+  ],
+  "title": "Lameridian",
+  "description": "A luxurious five star hotel.",
+  "guestCount": "200",
+  "bedroomCount": "100",
+  "bathroomCount": "100",
+  "amenities": [
+    "🏊 Pool",
+    "💆🏼 Spa",
+    "🛜 Free WiFi",
+    "🌊 Beach Access"
+  ],
+  "host": "Lameridian Host",
+  "address": "79/A Commercial Area Airport Rd, Dhaka 1229",
+  "latitude": "23.83642",
+  "longitude": "90.41795",
+  "rooms": [
+    {
+      "hotelSlug": "lameridian",
+      "roomSlug": "garden-view-suite",
+      "roomTitle": "Garden View Suite",
+      "bedroomCount": "2",
+      "roomImage": [
+        "http://localhost:3002/uploads/rooms/1731479032307-garden-view-suite-room21.jpeg",
+        "http://localhost:3002/uploads/rooms/1731479032307-garden-view-suite-room51.jpeg"
+      ]
+    }
+  ]
+}
