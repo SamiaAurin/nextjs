@@ -91,7 +91,14 @@ The Hotel Management API includes the following core routes in src/app.ts:
   
 - **GET /api/hotel/:idOrSlug**: Retrieve information for a hotel by its ID or slug.
   - This endpoint allows fetching hotel details, including room details and images, using either the hotel `id` or `slug`.
-  - In Postman Make a request using GET method http://localhost:3002/api/hotel/hotel-id 
+  - In Postman Make a request using GET method http://localhost:3002/api/hotel/hotel-id
+
+- **GET /api/hotel/:slug/:id**: Retrieve information for a hotel by its slug and id. 
+  - This endpoint allows fetching hotel details, including room details (not room images) using  the hotel `id` and `slug`.
+  - This new API endpoint allows the frontend to fetch hotel data using the URL pattern: 
+    http://localhost:3000/hotel-details/[slug]/[hotelid]. To ensure accurate data retrieval and prevent mismatches between hotels with the same slug, the hotelId is also included as a required 
+    parameter in the URL.
+  - In Postman Make a request using GET method http://localhost:3002/api/hotel/slug/hotel-id
 
 - **PUT /api/hotel/:id**: Update an existing hotel by its ID.
   - Use this endpoint to update hotel details such as title, description, amenities, etc., using the hotel `id`.
