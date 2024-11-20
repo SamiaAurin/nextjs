@@ -126,16 +126,16 @@ http://localhost:3000/hotel-details/lameridian/1731479032307
 or 
 http://localhost:3000/hotel-details/juneau-vacation-home/1731921707038
 
-This will display a frontend page showing the hotel details, such as title, description, images, and amenities, rooms descriptions. The layout and design of the page are based on the structure and style detailed in the **`Lameridian - Your Hotel Guide.pdf`** file, which can be found in the **`frontend` folder**.
+This will display a frontend page showing the hotel details, such as title, description, images, and amenities, rooms descriptions. The layout and design of the page are based on the structure and style detailed in the **`Lameridian - Your Hotel Guide.pdf`** file, which can be found in the **`frontend/public` folder**.
 
 ### Frontend Page
-The **`Lameridian - Your Hotel Guide.pdf`** file, located in the `frontend` folder, provides a visual guide on how the frontend page should look, including:
+The **`Lameridian - Your Hotel Guide.pdf`** file, located in the `frontend/public` folder, provides a visual guide on how the frontend page should look, including:
 - How hotel details are presented
 - Layout for the images and descriptions
 - General styling and structure
 
 ### Unit Tests
-Please Read **`UnitTest.pdf`** for necessary install dependencies and file configurations.
+Please Read **`UnitTest.pdf`** which can be found in the **`frontend/public` folder** for necessary install dependencies and file configurations.
 
 To run the unit tests for the project, use the following command:
 
