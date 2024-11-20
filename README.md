@@ -73,8 +73,8 @@ The project is organized into the following structure:
         - _app.tsx
         - _document.tsx
         - index.tsx
-    - styles
-      - globals.css
+      - styles
+        - globals.css
     - .eslintrc.json
     - .gitignore
     -  jest.config.ts
